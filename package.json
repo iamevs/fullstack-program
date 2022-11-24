@@ -4,6 +4,7 @@
   "description": "a form web app to store student's marks and other details and display them from database",
   "main": "main.js",
   "scripts": {
+    "dev" : "nodemon main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20"
   }
 }
