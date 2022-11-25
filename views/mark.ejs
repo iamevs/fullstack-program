@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>Mark</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center text-success mt3 mb3">
+            <%= title %>Mark Statement
+        </h1>
+        <% if (action == '/mark/add' ) { %>
+            <div class="container">
+                <!-- <h1 class="text-center text-success mt-3 mb-3 ">Student's Mark Register</h1> -->
+                <div class="card">
+                    <div class="card-header text-success fs-3">
+                        Student Details
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="/mark/add">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label>Name</label>
+                                        <input type="text" name="name" id="name" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label>Reg.No</label>
+                                        <input type="text" name="regno" id="regno" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-header text-Success fs-3">Subject</div>
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label>Subject 1</label>
+                                        <input type="number" name="python" id="mark1" class="form-control"
+                                            onchange="calc()" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label>Subject 2</label>
+                                        <input type="number" name="java" id="mark2" class="form-control"
+                                            onchange="calc()" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label>Subject 3</label>
+                                        <input type="number" name="computernetwork" id="mark3" class="form-control"
+                                            onchange="calc()" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label>Subject 4</label>
+                                        <input type="number" name="datastructure" id="mark4" class="form-control"
+                                            onchange="calc()" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label>Subject 5</label>
+                                        <input type="number" name="systemsoftware" id="mark5" class="form-control"
+                                            onchange="calc()" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label>Total</label>
+                                        <input type="number" name="total" id="total" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label>Average</label>
+                                        <input type="number" name="average" id="avg" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <button type="submit" id="btnsubmit" class="btn btn-success btn-sm">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script src="http://localhost:3000/javascripts/script.js"></script>
+            <% } else if(action=='view' ) { %>
+                <% } else {%>
+                    <% } %>
+
+</body>
+
+</html>
