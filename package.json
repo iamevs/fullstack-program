@@ -1,23 +1,18 @@
 {
-  "name": "form-app",
-  "version": "1.0.0",
-  "description": "a form web app to store student's marks and other details and display them from database",
-  "main": "main.js",
+  "name": "form1",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "nodemon main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "dev": "nodemon main.js"
   },
-  "keywords": [
-    "full-stack",
-    "student-mark-dashboard",
-    "dashboard"
-  ],
-  "author": "vijayasenthil",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "http": "^0.0.1-security",
-    "mysql2": "^2.3.3",
-    "nodemon": "^2.0.20"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.8",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.3.3"
   }
 }

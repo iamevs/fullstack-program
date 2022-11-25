@@ -9,15 +9,16 @@ app.get('/', function (req, res) {
         console.log(name, roll, m1, m2, m3, m4, m5);
         var sql = "SELECT * FROM student_marks.student_details;";
         connection.query(`INSERT INTO student_marks.student_details(name,roll,m1,m2,m3,m4,m5) VALUES ('${name}',${roll},${m1},${m2},${m3},${m4},${m5});`);
-        connection.query(sql, function (err, result) {
-            if (err) throw err;
-            // res.send(result);
-        });
+        // connection.query(sql, function (err, result) {
+        //     if (err) throw err;
+        //     // res.send(result);
+        // });
+        alert("Data Inserted");
     }
     res.send(` 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <div class="container">
-            <h1 class="text-center text-success mt-3 mb-3 ">Student's Mark Registor</h1>
+            <h1 class="text-center text-success mt-3 mb-3 ">Student's Mark Register</h1>
             <div class="card">
                 <div class="card-header text-success fs-3">
                     Student Details
